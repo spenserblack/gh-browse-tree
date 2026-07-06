@@ -113,7 +113,7 @@ func (b browser) Prompt(entries []entry) (entry entry, up bool, err error) {
 
 // BaseEndpoint gets the base endpoint for the contents API.
 func (b browser) BaseEndpoint() string {
-	return fmt.Sprintf("repos/%s/%s/contents", b.repo.Name, b.repo.Owner)
+	return fmt.Sprintf("repos/%s/%s/contents", b.repo.Owner, b.repo.Name)
 }
 
 // Endpoint gets the endpoint for the browser.
